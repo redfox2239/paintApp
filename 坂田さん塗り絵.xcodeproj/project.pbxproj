@@ -29,6 +29,9 @@
 		7FA4E2641BEA5F4100041DE5 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FA4E25A1BEA5F4100041DE5 /* green.png */; };
 		7FA4E2651BEA5F4100041DE5 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FA4E25B1BEA5F4100041DE5 /* blue.png */; };
 		7FA4E2661BEA5F4100041DE5 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FA4E25C1BEA5F4100041DE5 /* red.png */; };
+		7FAD130A1C80BE820032FC8A /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAD13091C80BE820032FC8A /* MyPageViewController.swift */; };
+		7FAD130D1C80C09C0032FC8A /* MyPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAD130B1C80C09C0032FC8A /* MyPageTableViewCell.swift */; };
+		7FAD130E1C80C09C0032FC8A /* MyPageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FAD130C1C80C09C0032FC8A /* MyPageTableViewCell.xib */; };
 		7FD9F7B41C252DC600534EB4 /* PainttViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD9F7B31C252DC600534EB4 /* PainttViewController.swift */; };
 		7FED28181BE4765900876E64 /* sampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FED28171BE4765900876E64 /* sampleViewController.swift */; };
 		7FF1CFFD1BDB5C950004FC49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FF1CFFC1BDB5C950004FC49 /* AppDelegate.swift */; };
@@ -81,6 +84,9 @@
 		7FA4E25A1BEA5F4100041DE5 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
 		7FA4E25B1BEA5F4100041DE5 /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
 		7FA4E25C1BEA5F4100041DE5 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
+		7FAD13091C80BE820032FC8A /* MyPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		7FAD130B1C80C09C0032FC8A /* MyPageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyPageTableViewCell.swift; sourceTree = "<group>"; };
+		7FAD130C1C80C09C0032FC8A /* MyPageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyPageTableViewCell.xib; sourceTree = "<group>"; };
 		7FD9F7B31C252DC600534EB4 /* PainttViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PainttViewController.swift; sourceTree = "<group>"; };
 		7FED28171BE4765900876E64 /* sampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sampleViewController.swift; sourceTree = "<group>"; };
 		7FF1CFF91BDB5C950004FC49 /* 坂田さん塗り絵.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "坂田さん塗り絵.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +184,9 @@
 				7F3875A91C6EF17F00C4B6AD /* PaintTableViewCell.swift */,
 				7F3875AA1C6EF17F00C4B6AD /* PaintTableViewCell.xib */,
 				7F6159BD1C7853C9007A24F1 /* GradeViewController.swift */,
+				7FAD13091C80BE820032FC8A /* MyPageViewController.swift */,
+				7FAD130B1C80C09C0032FC8A /* MyPageTableViewCell.swift */,
+				7FAD130C1C80C09C0032FC8A /* MyPageTableViewCell.xib */,
 			);
 			path = "坂田さん塗り絵";
 			sourceTree = "<group>";
@@ -306,6 +315,7 @@
 				7F953EB81C2EF3AB0050DF47 /* usagi.png in Resources */,
 				7FA4E25D1BEA5F4100041DE5 /* white.png in Resources */,
 				7F953E921C2ED5F10050DF47 /* hogehoge.png in Resources */,
+				7FAD130E1C80C09C0032FC8A /* MyPageTableViewCell.xib in Resources */,
 				7FA4E2631BEA5F4100041DE5 /* orange.png in Resources */,
 				7FA4E2611BEA5F4100041DE5 /* yellow.png in Resources */,
 				7FA4E25F1BEA5F4100041DE5 /* brown.png in Resources */,
@@ -353,9 +363,11 @@
 				7F3875A61C6EE6DF00C4B6AD /* ULTModel.swift in Sources */,
 				7F6159BE1C7853C9007A24F1 /* GradeViewController.swift in Sources */,
 				7FF1CFFD1BDB5C950004FC49 /* AppDelegate.swift in Sources */,
+				7FAD130A1C80BE820032FC8A /* MyPageViewController.swift in Sources */,
 				7FD9F7B41C252DC600534EB4 /* PainttViewController.swift in Sources */,
 				7FA4E2521BEA5EAF00041DE5 /* PaintViewController.swift in Sources */,
 				7F3875A81C6EE9E100C4B6AD /* ListViewController.swift in Sources */,
+				7FAD130D1C80C09C0032FC8A /* MyPageTableViewCell.swift in Sources */,
 				7F3875A41C6EE57500C4B6AD /* ULTService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="k2F-B4-1DN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="ShH-wB-EZ3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
@@ -245,7 +245,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="933" y="296"/>
+            <point key="canvasLocation" x="1465" y="296"/>
         </scene>
         <!--採点モード-->
         <scene sceneID="XgU-6p-2df">
@@ -672,7 +672,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VVn-C1-gcc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1420" y="296"/>
+            <point key="canvasLocation" x="1952" y="296"/>
         </scene>
         <!--Paint View Controller-->
         <scene sceneID="L8k-OV-haR">
@@ -896,12 +896,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uZY-gZ-jdL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2291" y="343"/>
+            <point key="canvasLocation" x="2823" y="343"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--塗り絵画面-->
         <scene sceneID="Sc1-i9-p7J">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="k2F-B4-1DN" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="塗り絵画面" id="Z6s-So-OBr"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nXO-rv-d38">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -914,7 +915,46 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SGv-Co-92O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-20" y="296"/>
+            <point key="canvasLocation" x="512" y="296"/>
+        </scene>
+        <!--塗ったリスト-->
+        <scene sceneID="dGP-Xo-9YX">
+            <objects>
+                <viewController id="8hx-fJ-yPP" customClass="MyPageViewController" customModule="坂田さん塗り絵" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sab-Qb-4Si">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="KYa-ab-hXR">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="rk7-gv-ZUj">
+                                        <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rk7-gv-ZUj" id="z62-Rf-034">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="8hx-fJ-yPP" id="Gru-wb-5nl"/>
+                                    <outlet property="delegate" destination="8hx-fJ-yPP" id="OqJ-c3-PRO"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="塗ったリスト" id="uND-fK-LvU"/>
+                    <connections>
+                        <outlet property="myPageTableView" destination="KYa-ab-hXR" id="aRY-zU-0lH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vvI-Bu-haV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044" y="992"/>
         </scene>
         <!--塗り絵一覧-->
         <scene sceneID="oOM-4q-rib">
@@ -950,7 +990,44 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yEB-x7-fLx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="455" y="296"/>
+            <point key="canvasLocation" x="987" y="296"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="5Eo-kK-6Jo">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="ShH-wB-EZ3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="40M-Ku-CdS">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="k2F-B4-1DN" kind="relationship" relationship="viewControllers" id="kYa-Wv-ha1"/>
+                        <segue destination="v5k-WA-qHG" kind="relationship" relationship="viewControllers" id="L5M-PO-3sK"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WWU-HJ-MUU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-20" y="296"/>
+        </scene>
+        <!--塗り絵したリスト-->
+        <scene sceneID="O7b-zm-e2S">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v5k-WA-qHG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="塗り絵したリスト" id="Pxi-uk-97M"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z0B-KK-vPe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8hx-fJ-yPP" kind="relationship" relationship="rootViewController" id="4O7-Cq-IiC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Unn-lA-htP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="512" y="992"/>
         </scene>
     </scenes>
     <resources>

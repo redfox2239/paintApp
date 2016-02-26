@@ -114,8 +114,11 @@ class GradeViewController: UIViewController {
         }
         var imageSaveData = userDefaults.objectForKey("saveImageData") as! [NSData]
         var scoreSaveData = userDefaults.objectForKey("saveScoreData") as! [String]
-        imageSaveData.append(imageData!)
-        scoreSaveData.append(score!)
+        imageSaveData.insert(imageData!, atIndex: 0)
+        scoreSaveData.insert(score!, atIndex: 0)
+        userDefaults.setObject(imageSaveData, forKey: "saveImageData")
+        userDefaults.setObject(scoreSaveData, forKey: "saveScoreData")
+        userDefaults.synchronize()
         
         self.navigationController?.popToRootViewControllerAnimated(true)
     }
