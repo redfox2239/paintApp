@@ -36,27 +36,27 @@ class GradeViewController: UIViewController {
     func updateScore() {
         var artPoint = 0
         if(self.ArtisticPoint.text != ""){
-            artPoint = Int(self.ArtisticPoint.text!)!
-            self.alert(self.talentPoint)
+            artPoint = Int(self.ArtisticPoint.text!) != nil ? Int(self.ArtisticPoint.text!)! : 0
+            self.alert(self.ArtisticPoint)
         }
         var talentPoint = 0
         if(self.talentPoint.text != ""){
-            talentPoint = Int(self.talentPoint.text!)!
+            talentPoint = Int(self.talentPoint.text!) != nil ? Int(self.talentPoint.text!)! : 0
             self.alert(self.talentPoint)
         }
         var sensePoint = 0
         if(self.sensePoint.text != ""){
-            sensePoint = Int(self.sensePoint.text!)!
+            sensePoint = Int(self.sensePoint.text!) != nil ? Int(self.sensePoint.text!)! : 0
             self.alert(self.sensePoint)
         }
         var cutePoint = 0
         if(self.cutePoint.text != ""){
-            cutePoint = Int(self.cutePoint.text!)!
+            cutePoint = Int(self.cutePoint.text!) != nil ? Int(self.cutePoint.text!)! : 0
             self.alert(self.cutePoint)
         }
         var colorPoint = 0
         if(self.colorPoint.text != ""){
-            colorPoint = Int(self.colorPoint.text!)!
+            colorPoint = Int(self.colorPoint.text!) != nil ? Int(self.colorPoint.text!)! : 0
             self.alert(self.colorPoint)
         }
 
@@ -66,8 +66,19 @@ class GradeViewController: UIViewController {
     
     func alert(textField: UITextField) {
         if(textField.text != ""){
-            let point = Int(textField.text!)!
-            if (point > 20) {
+            let point = Int(textField.text!)
+            if(point == nil) {
+                self.timer.invalidate()
+                let alert = UIAlertController(title: "注意", message: "点数は数字で入力してください!", preferredStyle: UIAlertControllerStyle.Alert)
+                let action = UIAlertAction(title: "はい", style: UIAlertActionStyle.Default, handler: nil)
+                alert.addAction(action)
+                self.presentViewController(alert, animated: true, completion: { () -> Void in
+                    textField.text = ""
+                    self.timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "updateScore", userInfo: nil, repeats: true)
+                })
+                return
+            }
+            if (point! > 20) {
                 self.timer.invalidate()
                 let alert = UIAlertController(title: "注意", message: "20点以内で点数をつけてください", preferredStyle: UIAlertControllerStyle.Alert)
                 let action = UIAlertAction(title: "はい", style: UIAlertActionStyle.Default, handler: nil)
